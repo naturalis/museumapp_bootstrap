@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS "medialib_urls_new" (
     "unitid" string not null,
     "scientific_name" string not null,
     "url" string not null,
-    UNIQUE(url)
+    UNIQUE(unitid,url)
 );
 CREATE TABLE IF NOT EXISTS "skipped_scientific_names_new" (
     "scientific_name" string not null,
