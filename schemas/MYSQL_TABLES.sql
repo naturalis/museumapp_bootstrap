@@ -115,7 +115,6 @@ CREATE TABLE IF NOT EXISTS `nba` (
 CREATE TABLE IF NOT EXISTS `taxa_no_objects` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `taxon` varchar(50) DEFAULT NULL,
-  `main_image` varchar(1024) DEFAULT NULL,
   `inserted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
@@ -179,3 +178,12 @@ CREATE TABLE IF NOT EXISTS `ttik` (
   PRIMARY KEY (`id`),
   KEY `uninomial` (`uninomial`,`specific_epithet`,`infra_specific_epithet`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3288 DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `ttik_photo_species` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `taxon` varchar(50) DEFAULT NULL,
+  `main_image` varchar(1024) DEFAULT NULL,
+  `inserted` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
+
